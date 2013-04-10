@@ -1,0 +1,87 @@
+@import "bootstrap"
+@import "compass"
+
+
+body
+  background: url('bg.png') repeat
+
+[class*="span"]
+  margin-left: 0
+
+#picture-box-section
+  margin: 20px 0 0 0
+
+.row 
+  margin-left: 0
+
+li
+  list-style: none
+
+#navbar-section
+  background-color: darken($white, 2%)
+  margin-top: 20px
+  font: normal 12px Verdana
+  height: 36px
+  text-transform: uppercase
+  +box-shadow(0px 1px 2px darken($white, 20%))
+  li
+    width: (100 / 7) * 1%
+    text-align: center
+    a
+      +transition(all 0.2s ease-in-out)
+      &:hover
+        color: $orange
+        background: darken($white, 10%)
+
+#img-logo-left
+  float: left
+  opacity: 0.6
+  &:hover
+    opacity: 1
+
+#img-logo
+  float: none
+  display: block
+  margin: 0 auto
+  +transition(opacity 0.2s ease-in-out)
+  &:hover
+    opacity: 0.6
+
+#img-logo-right
+  float: right
+  opacity: 0.6
+  &:hover
+    opacity: 1
+
+#promo-section
+  margin-top: 30px
+
+#promo-img
+  float: left
+  border: 15px solid darken($white, 2%)
+  +box-shadow(0px 1px 1px #ccc)
+  &:hover
+    +transform(scale(1.1) rotate(-2deg))
+
+#promo-desc
+  float: right
+  width: $gridRowWidth - image-width('featured.jpg') - 50px
+  .beer-row
+    font: normal 25px Georgia, serif
+    border-bottom: 1px dashed $gray
+    height: image-height('featured.jpg') / 3
+    text-transform: uppercase
+    text-shadow: 1px 1px 1px #fff
+    color: #787871
+    position: relative
+  .promo-text
+    position: absolute
+    bottom: 0
+    text-shadow: 1px 1px 1px $orange
+  .promo-number
+    text-shadow: -2px -2px 10px $black
+    position: absolute
+    right: 0
+    bottom: -10px
+    color: desaturate($orange, 30%)
+    font: normal 75px Tahoma, Arial, sans-serif

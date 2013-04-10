@@ -1,0 +1,27 @@
+.container
+  #picture-box-section.row
+    .span4
+      = image_tag 'better-beer.png', id: "img-logo-left"
+    .span4
+      = image_tag 'logo.png', id: "img-logo"
+    .span4
+      = image_tag 'menu-items.png', id: "img-logo-right"
+
+  #navbar-section.row
+    ul.nav.nav-pills
+      - %w[Home About Food Beer Catering Locations Contact].each do |heading|
+        li 
+          a href="#" #{heading}
+
+  #promo-section.row
+    = image_tag 'featured.jpg', id: 'promo-img'
+    #promo-desc
+      .row-fluid.beer-row
+        .promo-text Beers on Tap 
+        .promo-number 35
+      .row-fluid.beer-row
+        .promo-text Bottle Selections 
+        .promo-number 150
+      .row-fluid.beer-row
+        .promo-text Beers Brewed on Site 
+        .promo-number 8
